@@ -28,41 +28,47 @@
 		<!-- header -->
 		<header class="header clear" role="banner">
 
-			<!-- wrapper -->
-			<div class="wrapper">
+			<div class="navigation">
 
-				<!-- logo -->
-				<div class="logo">
-					<a href="<?php echo home_url(); ?>">
-						<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-					</a>
+				<!-- wrapper -->
+				<div class="wrapper">
+
+					<!-- logo -->
+					<div class="logo">
+						<a href="<?php echo home_url(); ?>">
+							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+						</a>
+					</div>
+					<!-- /logo -->
+
+					<!-- nav -->
+					<nav class="nav" role="navigation">
+						<?php html5blank_nav(); ?>
+					</nav>
+					<!-- /nav -->
+
 				</div>
-				<!-- /logo -->
-
-				<!-- nav -->
-				<nav class="nav" role="navigation">
-					<?php html5blank_nav(); ?>
-				</nav>
-				<!-- /nav -->
+				<!-- /wrapper -->
 
 			</div>
-			<!-- /wrapper -->
+			<!-- .navigation -->
+
+			<?php
+				# Despliega imagen destacada como background en el encabezado del Theme
+				if( is_page() ) :	# Si estamos en una página cualquiera haga
+			  	$outstanding_image = wp_get_attachment_image_src(
+						get_post_thumbnail_id(),			# Obtenemos el ID de la imagen
+						'full'												# Tamaño de la imagen (full: completa)
+					);
+					$url_image = $outstanding_image[ 0 ];	# Asignamos la URL de la imagen
+			?>
+				<div class="background-image" style="background-image: url( '<?php echo $url_image; ?>' );"></div>
+			<?php endif; ?>
 
 		</header>
 		<!-- /header -->
 
-		<?php
-			# Despliega imagen destacada como background en el encabezado del Theme
-			if( is_page() ) :	# Si estamos en una página cualquiera haga
-		  	$outstanding_image = wp_get_attachment_image_src(
-					get_post_thumbnail_id(),			# Obtenemos el ID de la imagen
-					'full'												# Tamaño de la imagen (full: completa)
-				);
-				$url_image = $outstanding_image[ 0 ];	# Asignamos la URL de la imagen
-		?>
-			<div class="background-image" style="background-image: url( '<?php echo $url_image; ?>' );"></div>
-		<?php endif; ?>
 
 		<!-- wrapper -->
 		<div class="wrapper">

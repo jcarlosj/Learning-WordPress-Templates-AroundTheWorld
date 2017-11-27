@@ -75,16 +75,29 @@ input:focus {
 
 /* wrapper */
 .wrapper {
-	max-width:1100px;
-	width:95%;
 	margin:0 auto;
+	max-width:1100px;
 	position:relative;
+	width:95%;
 }
 /* header */
 .header {
+	position: relative;
+}
+.header .navigation {
 	background-color: rgba( 0, 0, 0, .7 );
 	height: 73px;
 	margin-top: 15px;
+	position: relative;
+	z-index: 1;
+}
+.header .background-image {
+	background-size: cover;
+	height: 300px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 /* logo */
 .logo {
@@ -119,6 +132,10 @@ input:focus {
 	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+/* Content */
+main {
+	margin-top: 250px;
 }
 /* sidebar */
 .sidebar {
