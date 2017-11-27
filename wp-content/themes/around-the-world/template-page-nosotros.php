@@ -28,26 +28,43 @@
 
 			<div class="gallery grid_1-3">
 
-				<?php # WordPress debe desplegar los ID de las imagenes
-				      # (ir al Admin y cambiar esta opcion para cada campo en el ACF)
-						$image = get_field( 'imagen_superior' );
-						if( $image ) {
-							echo wp_get_attachment_image(
-								$image,					# Id de la imagen
-								'image-medium'	# Tamaño predefinido de la imagen
-							);
-						}
+				<div class="edge-photography">
 
-						# WordPress debe desplegar los ID de las imagenes
-				    # (ir al Admin y cambiar esta opcion para cada campo en el ACF)
-						$image = get_field( 'imagen_inferior' );
-						if( $image ) {
-							echo wp_get_attachment_image(
-								$image,					# Id de la imagen
-								'image-medium'	# Tamaño predefinido de la imagen
-							);
-						}
-				?>
+					<?php # WordPress debe desplegar los ID de las imagenes
+								# (ir al Admin y cambiar esta opcion para cada campo en el ACF)
+							$image = get_field( 'imagen_superior' );
+							if( $image ) {
+								echo wp_get_attachment_image(
+									$image,					# Id de la imagen
+									'image-medium', # Tamaño predefinido de la imagen
+									false,					# Icono [true/false]
+									array(					# Atributos adicionales
+										'class' => 'photograph'		# Atributo y parámetro que agregará
+									)
+								);
+							}
+					?>
+
+				</div>
+				<div class="edge-photography">
+
+					<?php
+							# WordPress debe desplegar los ID de las imagenes
+					    # (ir al Admin y cambiar esta opcion para cada campo en el ACF)
+							$image = get_field( 'imagen_inferior' );
+							if( $image ) {
+								echo wp_get_attachment_image(
+									$image,					# Id de la imagen
+									'image-medium',	# Tamaño predefinido de la imagen
+									false,					# Icono [true/false]
+									array(					# Atributos adicionales
+										'class' => 'photograph'		# Atributo y parámetro que agregará
+									)
+								);
+							}
+					?>
+
+				</div>
 
 			</div>
 
