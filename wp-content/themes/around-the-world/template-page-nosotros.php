@@ -18,6 +18,8 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<?php the_content(); ?>
+				<img src="<?php the_field( 'imagen_superior' ); ?>" alt="">
+				<img src="<?php the_field( 'imagen_inferior' ); ?>" alt="">
 
 				<br class="clear">
 
