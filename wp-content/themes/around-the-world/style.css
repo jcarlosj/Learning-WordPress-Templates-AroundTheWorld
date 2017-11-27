@@ -30,7 +30,7 @@ html {
 	font-size:62.5%;
 }
 body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font:300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#444;
 }
 /* clear */
@@ -126,7 +126,17 @@ input:focus {
 }
 /* footer */
 .footer {
-
+	background-color: #323232;
+	border-top: 7px solid #DF7900;
+	padding: 20px 0;
+	color: white;
+}
+.footer .widgets .column3 {
+	float: left;
+	width: 25%;
+}
+.footer p.copyright {
+	text-align: center;
 }
 
 /*------------------------------------*\
