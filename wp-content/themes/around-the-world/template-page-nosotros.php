@@ -18,8 +18,26 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<?php the_content(); ?>
-				<img src="<?php the_field( 'imagen_superior' ); ?>" alt="">
-				<img src="<?php the_field( 'imagen_inferior' ); ?>" alt="">
+				<?php # WordPress debe desplegar los ID de las imagenes
+				      # (ir al Admin y cambiar esta opcion para cada campo en el ACF)
+						$image = get_field( 'imagen_superior' );
+						if( $image ) {
+							echo wp_get_attachment_image(
+								$image,					# Id de la imagen
+								'image-medium'	# Tamaño predefinido de la imagen
+							);
+						}
+
+						# WordPress debe desplegar los ID de las imagenes
+				    # (ir al Admin y cambiar esta opcion para cada campo en el ACF)
+						$image = get_field( 'imagen_inferior' );
+						if( $image ) {
+							echo wp_get_attachment_image(
+								$image,					# Id de la imagen
+								'image-medium'	# Tamaño predefinido de la imagen
+							);
+						}
+				?>
 
 				<br class="clear">
 
