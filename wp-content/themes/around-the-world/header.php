@@ -63,7 +63,8 @@
 					);
 					$url_image = $outstanding_image[ 0 ];	# Asignamos la URL de la imagen
 			?>
-				<div class="background-image" style="background-image: url( '<?php echo $url_image; ?>' );"></div>
+				<div class="alpha-background-image"></div>
+				<div class="page-background-image" style="background-image: url( '<?php echo $url_image; ?>' );"></div>
 			<?php endif; ?>
 
 		</header>
