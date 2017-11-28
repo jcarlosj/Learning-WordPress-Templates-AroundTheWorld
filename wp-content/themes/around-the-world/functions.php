@@ -457,4 +457,13 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+/* ---------------------------
+ * CAMBIO DE FORMATO FECHA
+ */
+function change_date_format( $date ) {
+  $format = 'd F, Y';
+  $date = strtotime( $date );
+  return date_i18n( $format, $date );   # Aplica el formato a la fecha
+}
+
 ?>

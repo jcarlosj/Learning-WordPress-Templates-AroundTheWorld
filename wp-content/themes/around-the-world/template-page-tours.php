@@ -39,13 +39,8 @@
 						<h2><?php the_title(); ?></h2>
 					</a>
 					<?php
-						$format = 'd F, Y';
-
-						$date = strtotime( get_field( 'fecha_de_salida' ) );
-						$departure_date = date_i18n( $format, $date );					# Aplica el formato a la fecha
-
-						$date = strtotime( get_field( 'fecha_de_entrada' ) );
-						$arrival_date = date_i18n( $format, $date );					# Aplica el formato a la fecha
+						$departure_date = change_date_format( strtotime( get_field( 'fecha_de_salida' ) ) );	# Implementamos la funcionalidad cambio de fecha (functions.php)
+						$arrival_date = change_date_format( strtotime( get_field( 'fecha_de_regreso' ) ) );		# Implementamos la funcionalidad cambio de fecha (functions.php)
 					?>
 					<p class="date">
 						<?php echo $departure_date; ?> - <?php echo $arrival_date; ?>
