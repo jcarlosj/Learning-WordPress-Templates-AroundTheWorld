@@ -10,7 +10,7 @@
 		<!-- section -->
 		<section class="clear">
 
-			<h1><span><?php the_title(); ?></span></h1>
+			<h1><span><?php the_title(); ?> TOURS</span></h1>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -55,7 +55,7 @@
 					</p>
 					<p class="description">
 						<?php the_field( 'descripcion_corta' ); ?>
-					</p>
+					<!--/p-->
 				</article>
 				<!-- /article -->
 
