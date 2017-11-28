@@ -30,7 +30,32 @@
 
 				<!-- article -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid_2-3' ); ?>>
-					<?php the_title(); ?>
+
+					<?php the_post_thumbnail( 'featured-tour-image' ); ?>
+					<a href="<?php the_permalink(); ?>">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/masinfo.png" alt="más info">
+					</a>
+					<a href="<?php the_permalink(); ?>">
+						<h2><?php the_title(); ?></h2>
+					</a>
+					<?php
+						$format = 'd F, Y';
+
+						$date = strtotime( get_field( 'fecha_de_salida' ) );
+						$departure_date = date_i18n( $format, $date );					# Aplica el formato a la fecha
+
+						$date = strtotime( get_field( 'fecha_de_entrada' ) );
+						$arrival_date = date_i18n( $format, $date );					# Aplica el formato a la fecha
+					?>
+					<p class="date">
+						<?php echo $departure_date; ?> - <?php echo $arrival_date; ?>
+					</p>
+					<p class="price">
+						<?php the_field( 'precio' ); ?>
+					</p>
+					<p class="description">
+						<?php the_field( 'descripcion_corta' ); ?>
+					</p>
 				</article>
 				<!-- /article -->
 

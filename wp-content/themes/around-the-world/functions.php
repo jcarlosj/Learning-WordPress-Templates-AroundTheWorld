@@ -33,6 +33,7 @@ if (function_exists('add_theme_support'))
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     add_image_size( 'image-medium', 350, 250, true ); # Personalización imagenes (Página Nosotros)
+    add_image_size( 'featured-tour-image', 523, 294, true ); # Personalización imagenes (Página Tours)
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     add_theme_support('custom-background', array(
