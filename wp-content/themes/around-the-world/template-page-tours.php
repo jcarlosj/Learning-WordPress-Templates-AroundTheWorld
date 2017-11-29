@@ -10,14 +10,14 @@
 		<!-- section -->
 		<section class="clear">
 
-			<h1><span><?php the_title(); ?> TOURS</span></h1>
+			<h1><span><?php the_title(); ?></span></h1>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<?php
 				$args = array(
 					'order'          => 'ASC',		# Orden Ascendente
-					'orderby'        => 'title',	# Ordenar por título
+					'orderby'        => 'date',	  # Ordenar por fecha
 					'post_type'      => 'tours',	# Nombre del Post Type: Tours (Creado en el functions.php)
 					'posts_per_page' => 4,				# Número de publicaciones por página
 				);
@@ -28,29 +28,39 @@
 					$tours -> the_post();
 			?>
 
-				<!-- article -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid_2-3' ); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid_2-4' ); ?>>
 
-					<?php the_post_thumbnail( 'featured-tour-image' ); ?>
+					<div class="outstanding_image">
+					  <?php the_post_thumbnail( 'featured-tour-image' ); ?>
+					  <a class="more-info" href="<?php the_permalink(); ?>">
+					    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/masinfo.png" alt="Más info" />
+					  </a>
+					</div><!-- .outstanding_image -->
+
 					<a href="<?php the_permalink(); ?>">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/masinfo.png" alt="más info">
+					  <h2><?php the_title(); ?></h2>
 					</a>
-					<a href="<?php the_permalink(); ?>">
-						<h2><?php the_title(); ?></h2>
-					</a>
+
 					<?php
-						$departure_date = change_date_format( strtotime( get_field( 'fecha_de_salida' ) ) );	# Implementamos la funcionalidad cambio de fecha (functions.php)
-						$arrival_date = change_date_format( strtotime( get_field( 'fecha_de_regreso' ) ) );		# Implementamos la funcionalidad cambio de fecha (functions.php)
+					  $departure_date = change_date_format( strtotime( get_field( 'fecha_de_salida' ) ) );	# Implementamos la funcionalidad cambio de fecha (functions.php)
+					  $arrival_date = change_date_format( strtotime( get_field( 'fecha_de_regreso' ) ) );		# Implementamos la funcionalidad cambio de fecha (functions.php)
 					?>
-					<p class="date">
-						<?php echo $departure_date; ?> - <?php echo $arrival_date; ?>
-					</p>
-					<p class="price">
-						<?php the_field( 'precio' ); ?>
-					</p>
+
+					<div class="date-price clear">
+					  <p class="date">
+					    <?php echo $departure_date; ?> - <?php echo $arrival_date; ?>
+					  </p><!-- .date -->
+					  <p class="price">
+					    <?php the_field( 'precio' ); ?>
+					  </p><!-- .price -->
+					</div><!-- .date-price -->
+
+					<div class="clear"></div>
+
 					<p class="description">
-						<?php the_field( 'descripcion_corta' ); ?>
-					<!--/p-->
+					  <?php the_field('descripcion_corta'); ?>
+					</p>
+
 				</article>
 				<!-- /article -->
 
