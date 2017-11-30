@@ -34,6 +34,7 @@ if (function_exists('add_theme_support'))
 
     add_image_size( 'image-medium', 350, 250, true ); # Personalización imagenes (Página Nosotros)
     add_image_size( 'featured-tour-image', 523, 294, true ); # Personalización imagenes (Página Tours)
+    add_image_size( 'main image tours', 751, 422, true ); # Personalización imagenes (Página single-tours.php)
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     add_theme_support('custom-background', array(
