@@ -109,7 +109,7 @@ function html5blank_header_scripts()
       wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
       wp_enqueue_script('html5blankscripts'); // Enqueue it!
 
-      wp_register_script( 'lightbox2', get_template_directory_uri() . '/js/lightbox.min.js', array(), '2.10.0'); // Lightbox2
+      wp_register_script( 'lightbox2', get_template_directory_uri() . '/js/lightbox.min.js', array(), '2.10.0', true ); // Lightbox2
       wp_enqueue_script( 'lightbox2' ); // Enqueue it!
     }
 }
