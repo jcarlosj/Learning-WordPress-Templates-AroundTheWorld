@@ -26,29 +26,29 @@
 					$arrival_date = change_date_format( strtotime( get_field( 'fecha_de_regreso' ) ) );		# Implementamos la funcionalidad cambio de fecha (functions.php)
 				?>
 				<p class="date">
-					Duración:
+				<span>Duración:</span>
 					<?php echo $departure_date; ?> - <?php echo $arrival_date; ?>
 				</p>
 				<p class="place-of-departure">
-					Lugar de salida:
+					<span>Lugar de salida:</span>
 					<?php the_field( 'lugar_de_salida' ); ?>
 				</p>
 				<p class="places-available">
-					Lugares disponibles:
+					<span>Lugares disponibles:</span>
 					<?php the_field( 'lugares_disponibles' ); ?>
 				</p>
 				<p class="price">
-					Precio:
+					<span>Precio:</span>
 					<?php the_field( 'precio' ); ?>
 				</p>
 
-				<h2>Itinerario de Viaje</h2>
-
-				<p class="intinerary">
-					<?php the_field( 'intinerario' ); ?>
-				</p> 
-
 			</div>
+
+			<h2 class="title-intinerary">Itinerario de Viaje</h2>
+
+			<p class="intinerary">
+				<?php the_field( 'intinerario' ); ?>
+			</p>
 
 		</article>
 		<!-- /article -->

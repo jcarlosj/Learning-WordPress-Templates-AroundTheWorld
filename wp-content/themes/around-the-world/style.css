@@ -163,7 +163,7 @@ h2 {
 	text-transform: uppercase;
 }
 /* Content */
-main {
+.page main {
 	margin-top: 250px;
 }
 /* sidebar */
@@ -292,6 +292,24 @@ article.type-tours .description {
 	overflow: auto;
 	padding: 2px 6px;
 }
+
+/* Tours */
+.travel-information {
+	background-color: rgba( 0, 0, 0, 0.13);
+	border: 1px solid #COCOCO;
+	margin-top: 20px;
+	padding: 20px;
+}
+.travel-information p span {
+	font-weight: bold;
+}
+
+h2.title-intinerary {
+	font-size: 28px;
+	text-align: center;
+}
+
+
 
 /*------------------------------------*\
     IMAGES
