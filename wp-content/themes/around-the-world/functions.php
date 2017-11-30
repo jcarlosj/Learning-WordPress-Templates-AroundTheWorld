@@ -360,6 +360,7 @@ add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comment
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+add_action('init', 'testimonios_post_type');  # Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -429,6 +430,44 @@ function create_post_type_html5()
             'search_items' => __('Buscar Tours', 'html5blank'),
             'not_found' => __('Tours no encontrados', 'html5blank'),
             'not_found_in_trash' => __('Tours no encontrado en la papelera', 'html5blank')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => false,
+        'menu_position' => 6,
+        'supports' => array(
+            'title',
+            'editor',
+            #'excerpt',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            #'post_tag',
+            #'category'
+        ) // Add Category and Post Tags support
+    ));
+}
+
+# Crea 'Custom Post Type' para la sección de Testimonios
+function testimonios_post_type() {
+    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'html5-blank');
+    register_post_type('testimonios', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Testimonios', 'html5blank'), // Rename these to suit
+            'singular_name' => __('Testimonio', 'html5blank'),
+            'add_new' => __('Agregar nuevo', 'html5blank'),
+            'add_new_item' => __('Agregar Nuevo Testimonio', 'html5blank'),
+            'edit' => __('Editar', 'html5blank'),
+            'edit_item' => __('Editar Testimonio', 'html5blank'),
+            'new_item' => __('Nuevo Testimonio', 'html5blank'),
+            'view' => __('Ver Testimonios', 'html5blank'),
+            'view_item' => __('Ver Testimonio', 'html5blank'),
+            'search_items' => __('Buscar Testimonios', 'html5blank'),
+            'not_found' => __('Testimonios no encontrados', 'html5blank'),
+            'not_found_in_trash' => __('Testimonios no encontrado en la papelera', 'html5blank')
         ),
         'public' => true,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
