@@ -73,6 +73,12 @@ h2 {
 	font-size: 24px;
 	font-weight: bold;
 }
+h3 {
+	border-bottom: 4px solid #CCCCCC;
+	color: #D47900;
+	font-size: 24px;
+	font-weight: bold;
+}
 /*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
@@ -293,7 +299,8 @@ article.type-tours .description {
 	padding: 2px 6px;
 }
 
-/* Tours */
+/* Single: Tours */
+/* (Información) */
 .travel-information {
 	background-color: rgba( 0, 0, 0, 0.13);
 	border: 1px solid #COCOCO;
@@ -304,13 +311,32 @@ article.type-tours .description {
 	font-weight: bold;
 }
 
-h2.title-intinerary {
+/* (Itinerario) */
+h2.title-itinerary {
 	font-size: 28px;
 	text-align: center;
 }
 
+/* (Gallery) */
+.gallery .gallery-item {
+	height: 100px;
+	padding: 0 6px;
+	width: auto;
+}
+.gallery .gallery-item img {
+	border: none;
+	height: 100%;
+	width: 100px;
+}
+.gallery br {
+	display: none;
+}
 
-
+/* (Editar Post) */
+.edit-post {
+	clear: both;
+	padding-left: 8px;
+}
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/

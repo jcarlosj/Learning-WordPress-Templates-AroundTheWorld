@@ -44,9 +44,9 @@
 
 			</div>
 
-			<h2 class="title-intinerary">Itinerario de Viaje</h2>
+			<h2 class="title-itinerary">Itinerario de Viaje</h2>
 
-			<p class="intinerary">
+			<p class="itinerary">
 				<?php the_field( 'intinerario' ); ?>
 			</p>
 
@@ -54,9 +54,12 @@
 		<!-- /article -->
 
 		<div class="grid_1-3">
+			<h3>Galería de imágenes</h3>
 			<?php the_content(); // Dynamic Content (Gallery) ?>
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-		</div>
+			<div class="edit-post">
+				<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+			</div>
+		</div><!-- .grid_1-3 | (SideBar: Gallery) -->
 
 	<?php endwhile; ?>
 
