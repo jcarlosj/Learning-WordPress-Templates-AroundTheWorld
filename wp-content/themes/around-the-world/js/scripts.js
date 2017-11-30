@@ -1,11 +1,16 @@
 (function ($, root, undefined) {
-	
+
 	$(function () {
-		
+
 		'use strict';
-		
-		// DOM ready, take it away
-		
+
+		// Tours: Gallery (Plugin jQuery LightBox 2)
+		jQuery( '.gallery a' ) .each( function() {
+			jQuery( this ) .attr(
+				{'data-lightbox':'galeria'}
+			);
+		});
+
 	});
-	
+
 })(jQuery, this);
