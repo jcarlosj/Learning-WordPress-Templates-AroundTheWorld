@@ -16,6 +16,10 @@
 				'showImageNumberLabel' : false, // Quita el label de numeración de las imágenes de la galería
 
 		});
+
+		//
+		jQuery( '.single-tours header nav ul li:contains("Tours")' ) .addClass( 'current_page_item' );
+
 	});
 
 })(jQuery, this);
