@@ -27,7 +27,28 @@
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid_2-3' ); ?>>
 
-				Aquí van los testimonios de los clientes
+				<?php
+					$args = array(
+						'post_type'      => 'testimonios',		# Nombre del Post Type: testimonios (Creado en el functions.php o Slug sifue creado con 'CPT UI Plugin')
+						'posts_per_page' => -1,					      # Número de publicaciones por página (-1 = Todas)
+						'order'          => 'DESC',						# Ordenamiento descendente
+						'order_by'       => 'date'						# Ordenados por       : campo fecha
+					);
+
+					$testimonios = new WP_Query( $args );
+
+					while( $testimonios -> have_posts() ):
+						$testimonios -> the_post();
+				?>
+
+					<article class="testimonio grid_2-3">
+						<h2><?php the_title(); ?></h2>
+						<blockquote><?php echo get_the_content(); # Para que no agregue el tag <p> ?></blockquote>			
+						<p class=""><?php the_field( 'nombre' ) ?></p>
+						<p class=""><?php the_field( 'ciudad' ) ?></p>
+					</article>
+
+				<?php endwhile; wp_reset_postdata(); ?>
 
 			</article>
 			<!-- /article -->
