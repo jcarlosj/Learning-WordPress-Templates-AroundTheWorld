@@ -22,7 +22,7 @@
 					'order'          => 'DESC',		# Orden Ascendente
 					'orderby'        => 'date',	  # Ordenar por fecha
 					'post_type'      => 'post',	  # Nombre del Post Type: 'post' hace referencia a las entradas del Blog
-					'posts_per_page' => 2,				# Número de publicaciones por página
+					'posts_per_page' => 5,				# Número de publicaciones por página
 					'paged'          => $paged 		# Controla la paginación
 				);
 
@@ -44,7 +44,11 @@
 						</a>
 
 						<div class="grid_1-3">
-
+							<!-- post details -->
+							<span class="date">Escrito el: <?php the_time('F j, Y'); ?> </span>
+							<span class="author"><?php _e( 'Publicado por: ', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+							<span class="category"><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></span>
+							<!-- post details -->
 						</div>
 						<div class="grid_2-3">
 							<h2>
