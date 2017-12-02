@@ -337,6 +337,59 @@ h2.title-itinerary {
 	clear: both;
 	padding-left: 8px;
 }
+
+/* Testimonios */
+
+blockquote {
+	border-left: 15px solid #DF7900;
+	padding: .2em 10px;
+}
+
+article.testimonio {
+	background-color: #FEFAF5;
+	border: 1px solid #A8A8A8;
+	margin-bottom: 14px;
+}
+
+article.testimonio h2 {
+	background-color: #DF7900;
+	color: white;
+	margin: 0;
+	padding: 5px 0 5px 20px;
+}
+
+article.testimonio blockquote {
+	border-left: none;
+	margin: 0;
+	quotes: '\201C''\201C';
+}
+article.testimonio blockquote:before {
+	color: #616161;
+	content: open-quote;
+	font-size: 13em;
+	line-height: .9em;
+	margin-right: .1em;
+	vertical-align: -.4em;
+	display: inline;
+	position: absolute;
+}
+article.testimonio blockquote p {
+	display: block;
+	margin-left: 80px;
+}
+
+article.testimonio p.name,
+article.testimonio p.city {
+	text-align: right;
+	margin: 0 20px 0 0;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+article.testimonio p.city {
+	margin-bottom: 10px;
+}
+
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/

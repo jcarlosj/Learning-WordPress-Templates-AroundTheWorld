@@ -16,16 +16,10 @@
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid_2-3' ); ?>>
 
+				<?php edit_post_link(); ?>
 				<?php the_content(); ?>
 
 				<br class="clear">
-
-				<?php edit_post_link(); ?>
-
-			</article>
-			<!-- /article -->
-
-			<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid_2-3' ); ?>>
 
 				<?php
 					$args = array(
@@ -41,19 +35,18 @@
 						$testimonios -> the_post();
 				?>
 
-					<article class="testimonio grid_2-3">
+					<article class="testimonio">
 						<h2><?php the_title(); ?></h2>
-						<blockquote><?php echo get_the_content(); # Para que no agregue el tag <p> ?></blockquote>			
-						<p class=""><?php the_field( 'nombre' ) ?></p>
-						<p class=""><?php the_field( 'ciudad' ) ?></p>
+						<blockquote><p><?php echo get_the_content(); # Para que no agregue el tag <p> ?></p></blockquote>
+						<p class="name"><?php the_field( 'nombre' ) ?></p>
+						<p class="city"><?php the_field( 'ciudad' ) ?></p>
 					</article>
+					<!-- /article -->
 
 				<?php endwhile; wp_reset_postdata(); ?>
 
 			</article>
 			<!-- /article -->
-
-
 
 		<?php endwhile; ?>
 
