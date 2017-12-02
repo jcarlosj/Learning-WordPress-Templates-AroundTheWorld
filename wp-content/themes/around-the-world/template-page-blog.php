@@ -15,83 +15,76 @@
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<?php
-			  # Ultima entrada (por fecha) del Blog: Página Consejos
-				$args = array(
-					'order'          => 'DESC',		# Orden Ascendente
-					'orderby'        => 'date',	  # Ordenar por fecha
-					'post_type'      => 'post',	  # Nombre del Post Type: 'post' hace referencia a las entradas del Blog
-					'posts_per_page' => 1,				# Número de publicaciones por página
-				);
-
-				$ultima_entrada = new WP_Query( $args );
-
-				while( $ultima_entrada -> have_posts() ) :
-					$ultima_entrada -> the_post();
-			?>
-
-				<article class="last-entry clear">
-
-					<a href="<?php the_permalink(); ?>">
-						<div class="edge-photography">
-							<?php the_post_thumbnail( 'main-image-blog' ); ?>
-						</div>
-					</a>
-
-					<div class="grid_1-3">
-
-					</div>
-					<div class="grid_2-3">
-						<h2>
-							<a href="<?php the_permalink(); ?>">
-								<?php the_title(); ?>
-							</a>
-						</h2>
-						<?php html5wp_excerpt('html5wp_custom_post'); ?>
-					</div>
-
-				</article>
-
-			<?php endwhile; wp_reset_postdata(); ?>
-
-			<?php
-			  # Paginación
+				# Paginación
 				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-			  # Imprime todos las entradas menos la última (por fecha) del Blog: Página Consejos
+				# Imprime todos las entradas menos la última (por fecha) del Blog: Página Consejos
 				$args = array(
 					'order'          => 'DESC',		# Orden Ascendente
 					'orderby'        => 'date',	  # Ordenar por fecha
 					'post_type'      => 'post',	  # Nombre del Post Type: 'post' hace referencia a las entradas del Blog
-					'posts_per_page' => 1,				# Número de publicaciones por página
+					'posts_per_page' => 2,				# Número de publicaciones por página
 					'paged'          => $paged 		# Controla la paginación
 				);
 
 				$consejos = new WP_Query( $args );
+				$i = 0;				# Flag
 
 				while( $consejos -> have_posts() ) :
 					$consejos -> the_post();
+
+					if( $i == 0 ):
 			?>
 
-				<article class="entry-tip clear">
+					<article class="last-entry clear">
 
-					<div class="grid_1-3">
 						<a href="<?php the_permalink(); ?>">
 							<div class="edge-photography">
-								<?php the_post_thumbnail( 'image-medium' ); ?>
+								<?php the_post_thumbnail( 'main-image-blog' ); ?>
 							</div>
 						</a>
-					</div>
-					<div class="grid_2-3">
-						<h2>
+
+						<div class="grid_1-3">
+
+						</div>
+						<div class="grid_2-3">
+							<h2>
+								<a href="<?php the_permalink(); ?>">
+									<?php the_title(); ?>
+								</a>
+							</h2>
+							<?php html5wp_excerpt('html5wp_custom_post'); ?>
+						</div>
+
+					</article>
+					<!-- .last-entry -->
+
+				<?php else: ?>
+					<article class="entry-tip clear">
+
+						<div class="grid_1-3">
 							<a href="<?php the_permalink(); ?>">
-								<?php the_title(); ?>
+								<div class="edge-photography">
+									<?php the_post_thumbnail( 'image-medium' ); ?>
+								</div>
 							</a>
-						</h2>
-						<?php html5wp_excerpt('html5wp_custom_post'); ?>
-					</div>
+						</div>
+						<div class="grid_2-3">
+							<h2>
+								<a href="<?php the_permalink(); ?>">
+									<?php the_title(); ?>
+								</a>
+							</h2>
+							<?php html5wp_excerpt('html5wp_custom_post'); ?>
+						</div>
 
-				</article>
+					</article>
+					<!-- .entry-tip -->
 
-			<?php endwhile; ?>
+			<?php
+				endif;
+				$i++;
+				endwhile;
+			?>
 
 			<nav class="pagination">
 				<ul>
