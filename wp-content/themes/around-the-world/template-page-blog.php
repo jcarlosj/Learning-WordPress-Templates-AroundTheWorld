@@ -54,13 +54,15 @@
 			<?php endwhile; wp_reset_postdata(); ?>
 
 			<?php
+			  # Paginación
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			  # Imprime todos las entradas menos la última (por fecha) del Blog: Página Consejos
 				$args = array(
 					'order'          => 'DESC',		# Orden Ascendente
 					'orderby'        => 'date',	  # Ordenar por fecha
 					'post_type'      => 'post',	  # Nombre del Post Type: 'post' hace referencia a las entradas del Blog
-					'posts_per_page' => 5,				# Número de publicaciones por página
-					'offset'         => 1         # Número de 'Post' que se va a saltar
+					'posts_per_page' => 1,				# Número de publicaciones por página
+					'paged'          => $paged 		# Controla la paginación
 				);
 
 				$consejos = new WP_Query( $args );
@@ -89,7 +91,16 @@
 
 				</article>
 
-			<?php endwhile; wp_reset_postdata(); ?>
+			<?php endwhile; ?>
+
+			<nav class="pagination">
+				<ul>
+					<li><?php previous_posts_link( '&laquo; Anterior', $consejos -> max_num_pages ) ?></li>
+					<li><?php next_posts_link( '&raquo; Siguiente', $consejos -> max_num_pages ) ?></li>
+				</ul>
+			</nav>
+
+			<?php wp_reset_postdata(); ?>
 
 			<?php edit_post_link(); ?>
 
