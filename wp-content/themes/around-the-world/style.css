@@ -401,6 +401,10 @@ article.testimonio p.city {
 	-moz-transform: rotate( 0deg );
 }
 
+.last-entry .post-details {
+	margin-top: 8px;
+}
+
 .last-entry a,
 .entry-tip a {
 	color: #DF7900;
@@ -408,7 +412,8 @@ article.testimonio p.city {
 
 .last-entry .author,
 .last-entry .date,
-.last-entry .category {
+.last-entry .category,
+.last-entry .edit-post-link {
 	display: block;
 	font-weight: bold;
 	padding-left: 26px;
@@ -421,24 +426,26 @@ article.testimonio p.city {
 
 /* single.php */
 .single-post div.edge-photography {
-	-webkit-transform: rotate( 0deg );
 	-moz-transform: rotate( 0deg );
-	margin-top: 0;
+	-webkit-transform: rotate( 0deg );
+	margin: 0;
 }
 
-.single-post .date,
-.single-post .author,
-.single-post .category,
-.single-post .comments {
+.single-post .post-details {
 	font-weight: bold;
-	display: block;
+	margin-top: 20px;
 }
-.single-post .author a,
-.single-post .category a,
-.single-post .comments a {
+.single-post .post-details a {
 	font-weight: normal;
 	color: #DF7900;
 }
+.single-post .post-details .date,
+.single-post .post-details .author,
+.single-post .post-details .category,
+.single-post .post-details .comment {
+	display: block;
+}
+
 
 /* Paginación */
 nav ul.pagination {

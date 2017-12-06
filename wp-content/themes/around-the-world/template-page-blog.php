@@ -44,11 +44,14 @@
 						</a>
 
 						<div class="grid_1-3">
-							<!-- post details -->
-							<span class="date">Escrito el: <?php the_time('F j, Y'); ?> </span>
-							<span class="author"><?php _e( 'Publicado por: ', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-							<span class="category"><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></span>
-							<!-- post details -->
+							<div class="post-details">
+								<!-- post details -->
+								<span class="date">Escrito el: <?php the_time('F j, Y'); ?> </span>
+								<span class="author"><?php _e( 'Publicado por: ', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+								<span class="category"><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></span>
+								<span class="edit-post-link"><?php edit_post_link(); ?></span> 
+								<!-- post details -->
+							</div>
 						</div>
 						<div class="grid_2-3">
 							<h2>
@@ -98,8 +101,6 @@
 			</nav>
 
 			<?php wp_reset_postdata(); ?>
-
-			<?php edit_post_link(); ?>
 
 			<br class="clear">
 
