@@ -338,7 +338,7 @@ h2.title-itinerary {
 	padding-left: 8px;
 }
 
-/* Testimonios */
+/* Page: Testimonios */
 
 blockquote {
 	border-left: 15px solid #DF7900;
@@ -388,6 +388,55 @@ article.testimonio p.city {
 
 article.testimonio p.city {
 	margin-bottom: 10px;
+}
+
+/* Page: Consejos */
+.last-entry .edge-photography {
+	-webkit-transform: rotate( -2deg );
+	-moz-transform: rotate( -2deg );
+}
+
+.entry-tip .edge-photography {
+	-webkit-transform: rotate( 0deg );
+	-moz-transform: rotate( 0deg );
+}
+
+.last-entry a,
+.entry-tip a {
+	color: #DF7900;
+}
+
+.last-entry .author,
+.last-entry .date,
+.last-entry .category {
+	display: block;
+	font-weight: bold;
+	padding-left: 26px;
+}
+
+.last-entry h2,
+.entry-tip h2 {
+	margin: 0;
+}
+
+/* Paginación */
+nav ul.pagination {
+	list-style: none;
+	margin-top: 50px;
+	margin-left: 40px;
+	padding: 0;
+	width: 30%;
+}
+nav ul.pagination li {
+	background-color: #DF7900;
+	float: left;
+	padding: 0 10px;
+	text-align: center;
+	border-radius: 3px;
+	margin-right: 10px;
+}
+nav ul.pagination li a {
+	color: white;
 }
 
 /*------------------------------------*\

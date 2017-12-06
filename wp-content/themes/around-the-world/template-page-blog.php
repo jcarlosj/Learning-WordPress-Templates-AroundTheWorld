@@ -90,10 +90,10 @@
 				endwhile;
 			?>
 
-			<nav class="pagination">
-				<ul>
+			<nav>
+				<ul class="pagination clear">
 					<li><?php previous_posts_link( '&laquo; Anterior', $consejos -> max_num_pages ) ?></li>
-					<li><?php next_posts_link( '&raquo; Siguiente', $consejos -> max_num_pages ) ?></li>
+					<li><?php next_posts_link( 'Siguiente &raquo; ', $consejos -> max_num_pages ) ?></li>
 				</ul>
 			</nav>
 
