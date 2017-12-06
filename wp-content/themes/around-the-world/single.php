@@ -27,10 +27,14 @@
 					<span class="date">Escrito el: <?php the_time('F j, Y'); ?> </span>
 					<span class="author"><?php _e( 'Publicado por: ', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
 					<span class="category"><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></span>
+					<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
 					<!-- post details -->
 
-					<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
 					<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+
+					<p class="shared">Compartir</p>
+					<!-- Go to www.addthis.com/dashboard to customize your tools -->
+					<div class="addthis_inline_share_toolbox"></div>
 				</div>
 			</div>
 			<div class="grid_2-3">

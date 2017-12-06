@@ -412,8 +412,7 @@ article.testimonio p.city {
 
 .last-entry .author,
 .last-entry .date,
-.last-entry .category,
-.last-entry .edit-post-link {
+.last-entry .category {
 	display: block;
 	font-weight: bold;
 	padding-left: 26px;
@@ -442,8 +441,15 @@ article.testimonio p.city {
 .single-post .post-details .date,
 .single-post .post-details .author,
 .single-post .post-details .category,
-.single-post .post-details .comment {
+.single-post .post-details .comment,
+.single-post .post-details a.post-edit-link {
 	display: block;
+}
+.single-post .post-details a.post-edit-link {
+	margin-bottom: 20px;
+}
+.single-post .post-details p.shared {
+	color: #DF7900;
 }
 
 
