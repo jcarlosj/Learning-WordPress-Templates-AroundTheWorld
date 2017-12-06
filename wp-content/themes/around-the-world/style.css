@@ -422,6 +422,10 @@ article.testimonio p.city {
 	color: #DF7900;
 }
 
+.page-template-template-page-blog .post-details a.post-edit-link {
+	margin-left: 26px;
+}
+
 .last-entry .author,
 .last-entry .date,
 .last-entry .category {

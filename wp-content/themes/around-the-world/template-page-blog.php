@@ -49,7 +49,7 @@
 								<span class="date">Escrito el: <?php the_time('F j, Y'); ?> </span>
 								<span class="author"><?php _e( 'Publicado por: ', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
 								<span class="category"><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></span>
-								<span class="edit-post-link"><?php edit_post_link(); ?></span> 
+								<?php edit_post_link(); ?> 
 								<!-- post details -->
 							</div>
 						</div>
