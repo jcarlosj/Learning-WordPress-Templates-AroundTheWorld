@@ -83,6 +83,57 @@
 				</div>
 				<div class="grid_1-4">
 					<h2>Últimos Consejos</h2>
+					<?php # WP_Query al contenido de la página Consejos (Blog) ?>
+					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+					<?php
+						$args = array(
+							'order'          => 'ASC',		# Orden Ascendente
+							'orderby'        => 'date',	  # Ordenar por fecha
+							'post_type'      => 'post',	  # Nombre del Post Type: Tours (Creado en el functions.php)
+							'posts_per_page' => 2,				# Número de publicaciones por página
+						);
+
+						$consejos = new WP_Query( $args );
+
+						while( $consejos -> have_posts() ) :
+							$consejos -> the_post();
+					?>
+
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+							<div class="outstanding_image grid_2-4">
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail( 'thumbnail-footer-image' ); ?>
+								</a>
+							</div><!-- .outstanding_image -->
+
+							<div class="entry clear grid_2-4">
+								<a href="<?php the_permalink(); ?>">
+									<h2><?php the_title(); ?></h2>
+								</a>
+							</div><!-- .title-date -->
+
+							<div class="clear"></div>
+
+						</article>
+						<!-- /article -->
+
+					<?php endwhile; wp_reset_postdata(); ?>
+
+				<?php endwhile; ?>
+
+				<?php else: ?>
+
+					<!-- article -->
+					<article>
+
+						<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+
+					</article>
+					<!-- /article -->
+
+				<?php endif; ?>
 				</div>
 				<div class="grid_1-4">
 

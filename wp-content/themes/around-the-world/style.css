@@ -204,7 +204,8 @@ footer [class*='grid_'] {
 .footer h2 {
 	margin-bottom: 30px;
 }
-.footer article .title-date h2 {
+.footer article .title-date h2,
+.footer article .entry h2  {
 	margin: 0;
 	font-size: 14px;
 	color: white;
