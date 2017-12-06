@@ -5,16 +5,25 @@
 		<footer class="footer" role="contentinfo">
 
 			<div class="widgets wrapper clear">
-				<div class="column3">
+				<div class="grid_1-4">
 					<h2>Sobre Nosotros</h2>
+					<?php
+					  # WP_Query al contenido de la página Nosotros a través
+						# de su 'page_id' de publicación en WordPress
+						$nosotros = new WP_Query( 'page_id=23' );
+
+						while( $nosotros -> have_posts() ):
+							$nosotros -> the_post();
+							html5wp_excerpt( 'html5wp_index' );
+						endwhile; wp_reset_postdata(); ?>
 				</div>
-				<div class="column3">
+				<div class="grid_1-4">
 					<h2>Próximos Viajes</h2>
 				</div>
-				<div class="column3">
+				<div class="grid_1-4">
 					<h2>Últimos Consejos</h2>
 				</div>
-				<div class="column3">
+				<div class="grid_1-4">
 					<h2>Cupones de descuento</h2>
 				</div>
 			</div>
