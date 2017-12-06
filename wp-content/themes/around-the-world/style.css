@@ -181,18 +181,36 @@ h3 {
 
 }
 /* footer */
+footer [class*='grid_'] {
+	padding: 3px;
+}
+
 .footer {
 	background-color: #323232;
 	border-top: 7px solid #DF7900;
 	padding: 20px 0;
 	color: white;
 }
-.footer .widgets .column3 {
-	float: left;
-	width: 25%;
+.footer article {
+	margin-bottom: 10px;
+}
+.footer article.type-tours {
+	margin: 0;
+	padding: 0;
+}
+.footer img {
+	border: 3px solid #464646;
 }
 .footer h2 {
 	margin-bottom: 30px;
+}
+.footer article .title-date h2 {
+	margin: 0;
+	font-size: 14px;
+	color: white;
+}
+.footer article .title-date p.date {
+	font-size: 10px;
 }
 .footer a,
 .footer a:hover {

@@ -19,7 +19,7 @@
 				</div>
 				<div class="grid_1-4">
 					<h2>Próximos Viajes</h2>
-
+					<?php # WP_Query al contenido de la página Tours ?>
 					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 					<?php
@@ -39,7 +39,9 @@
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 							<div class="outstanding_image grid_2-4">
-								<?php the_post_thumbnail( 'thumbnail-footer-image' ); ?>
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail( 'thumbnail-footer-image' ); ?>
+								</a>
 							</div><!-- .outstanding_image -->
 
 							<?php
@@ -83,7 +85,7 @@
 					<h2>Últimos Consejos</h2>
 				</div>
 				<div class="grid_1-4">
-					<h2>Cupones de descuento</h2>
+
 				</div>
 			</div>
 
