@@ -188,7 +188,7 @@ footer [class*='grid_'] {
 footer {
 	background-color: #323232;
 	border-top: 7px solid #DF7900;
-	padding: 20px 0;
+	padding: 20px 0 0 0;
 	color: white;
 }
 footer article {
@@ -219,7 +219,15 @@ footer a:hover {
 	font-weight: bold;
 }
 footer p.copyright {
+	margin-top: 20px;
+	padding: 10px 0;
 	text-align: center;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#323232+0,464646+50,323232+100 */
+	background: #323232; /* Old browsers */
+	background: -moz-linear-gradient(left, #323232 0%, #464646 50%, #323232 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #323232 0%,#464646 50%,#323232 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #323232 0%,#464646 50%,#323232 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#323232', endColorstr='#323232',GradientType=1 ); /* IE6-9 */
 }
 footer #widget_sp_image-2 {
 	margin-top: 25px;
