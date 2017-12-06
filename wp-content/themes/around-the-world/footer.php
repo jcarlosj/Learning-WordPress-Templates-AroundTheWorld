@@ -136,7 +136,8 @@
 				<?php endif; ?>
 				</div>
 				<div class="grid_1-4">
-
+					<?php # Despliega el widget-area-1 (Cupones de descuento) ?>
+					<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
 				</div>
 			</div>
 

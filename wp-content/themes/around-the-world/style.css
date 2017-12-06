@@ -185,41 +185,53 @@ footer [class*='grid_'] {
 	padding: 3px;
 }
 
-.footer {
+footer {
 	background-color: #323232;
 	border-top: 7px solid #DF7900;
 	padding: 20px 0;
 	color: white;
 }
-.footer article {
+footer article {
 	margin-bottom: 10px;
 }
-.footer article.type-tours {
+footer article.type-tours {
 	margin: 0;
 	padding: 0;
 }
-.footer img {
+footer img {
 	border: 3px solid #464646;
 }
-.footer h2 {
+footer h2 {
 	margin-bottom: 30px;
 }
-.footer article .title-date h2,
-.footer article .entry h2  {
+footer article .title-date h2,
+footer article .entry h2  {
 	margin: 0;
 	font-size: 14px;
 	color: white;
 }
-.footer article .title-date p.date {
+footer article .title-date p.date {
 	font-size: 10px;
 }
-.footer a,
-.footer a:hover {
+footer a,
+footer a:hover {
 	color: white;
 	font-weight: bold;
 }
-.footer p.copyright {
+footer p.copyright {
 	text-align: center;
+}
+footer #widget_sp_image-2 {
+	margin-top: 25px;
+}
+footer .widget_sp_image {
+	margin-top: 8px;
+}
+footer .widget_sp_image h3 {
+	display: none;
+}
+footer .widget_sp_image img {
+	border: none;
 }
 
 /*------------------------------------*\
