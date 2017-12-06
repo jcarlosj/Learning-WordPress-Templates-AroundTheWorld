@@ -419,6 +419,27 @@ article.testimonio p.city {
 	margin: 0;
 }
 
+/* single.php */
+.single-post div.edge-photography {
+	-webkit-transform: rotate( 0deg );
+	-moz-transform: rotate( 0deg );
+	margin-top: 0;
+}
+
+.single-post .date,
+.single-post .author,
+.single-post .category,
+.single-post .comments {
+	font-weight: bold;
+	display: block;
+}
+.single-post .author a,
+.single-post .category a,
+.single-post .comments a {
+	font-weight: normal;
+	color: #DF7900;
+}
+
 /* Paginación */
 nav ul.pagination {
 	list-style: none;
