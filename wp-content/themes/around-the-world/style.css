@@ -176,6 +176,10 @@ h3 {
 .page main {
 	margin-top: 250px;
 }
+
+.page main.header-no-image {
+	margin-top: 0px;
+}
 /* sidebar */
 .sidebar {
 

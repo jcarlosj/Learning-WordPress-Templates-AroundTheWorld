@@ -6,7 +6,22 @@
 
 <?php get_header(); ?>
 
-	<main role="main">
+<?php
+	# Agrega clase que quita el margen de la imagen destacada cuando esta no ha sido asignada
+	$outstanding_image = wp_get_attachment_image_src(
+		get_post_thumbnail_id(),			# Obtenemos el ID de la imagen
+		'full'												# Tamaño de la imagen (full: completa)
+	);
+	$url_image = $outstanding_image[ 0 ];	# Asignamos la URL de la imagen
+?>
+
+<?php if( $url_image != null ): # Existe la imagen destacada ?>
+		<main role="main">
+<?php else: ?>
+		<?php # NO Existe la imagen destacada ?>
+		<main role="main" class="header-no-image">
+<?php endif; ?>
+
 		<!-- section -->
 		<section class="clear">
 
@@ -49,7 +64,7 @@
 								<span class="date">Escrito el: <?php the_time('F j, Y'); ?> </span>
 								<span class="author"><?php _e( 'Publicado por: ', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
 								<span class="category"><?php _e( 'Categoría: ', 'html5blank' ); the_category(', '); // Separated by commas ?></span>
-								<?php edit_post_link(); ?> 
+								<?php edit_post_link(); ?>
 								<!-- post details -->
 							</div>
 						</div>

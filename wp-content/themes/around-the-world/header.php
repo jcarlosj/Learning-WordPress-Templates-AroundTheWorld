@@ -66,10 +66,18 @@
 						'full'												# Tamaño de la imagen (full: completa)
 					);
 					$url_image = $outstanding_image[ 0 ];	# Asignamos la URL de la imagen
+
+					# Si no es el archivo 'front-page.php' no carga la imagen destacada
+					if( !is_front_page() ):
+						if( $url_image != null ):
 			?>
 				<div class="alpha-background-image"></div>
 				<div class="page-background-image" style="background-image: url( '<?php echo $url_image; ?>' );"></div>
-			<?php endif; ?>
+			<?php
+						endif;		# $url_image
+					endif;		# is_front_page()
+				endif;		# is_page()
+			?>
 
 		</header>
 		<!-- /header -->
