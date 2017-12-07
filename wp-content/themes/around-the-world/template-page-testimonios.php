@@ -48,6 +48,14 @@
 			</article>
 			<!-- /article -->
 
+			<div class="form-testimonios grid_1-3">
+				<h3>Envíanos tu testimonio</h3>
+				<?php
+				 	# Imprime formulario Testimonios (Contact Form 7) usando su 'Shortcode'
+					echo do_shortcode( '[contact-form-7 id="132" title="Testimonios"]' );
+				?>
+			</div>
+
 		<?php endwhile; ?>
 
 		<?php else: ?>
