@@ -247,6 +247,11 @@ footer .widget_sp_image img {
 \*------------------------------------*/
 
 /* Slider: front-page.php */
+section.slider ul.slider {
+	/* Solo cuando se aplica mode: 'fade', a BxSlider */
+	margin: 0;
+	padding: 0;
+}
 section.slider .bx-wrapper {
 	border: none;
 }

@@ -18,7 +18,11 @@
 		});
 
 		// Implementamos bxslider
-		jQuery( 'ul.slider' ) .bxSlider();
+		jQuery( 'ul.slider' ) .bxSlider({
+			mode: 'fade',			// Cambia la forma como se muestra
+			pager: false,			// Elimina el paginador del Slider
+
+		});
 
 		// Detección de página actual agregando la clase para aplicar al item del menú de la página actual
 		jQuery( '.single-tours header nav ul li:contains("Tours")' ) .addClass( 'current_page_item' );
