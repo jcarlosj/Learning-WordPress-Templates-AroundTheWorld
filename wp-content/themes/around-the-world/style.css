@@ -245,6 +245,31 @@ footer .widget_sp_image img {
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
+
+/* Slider: front-page.php */
+section.slider .bx-wrapper {
+	border: none;
+}
+section.slider .bx-wrapper .bx-viewport {
+	border: none;
+	box-shadow: none;
+	left: 0;
+}
+section.slider .bx-wrapper .bx-controls-direction a {
+	height: 64px;
+	width: 44px;
+}
+section.slider .bx-wrapper .bx-prev,
+section.slider .bx-wrapper .bx-prev:hover {
+	background-position: 0 -1px;
+	left: 30px;
+}
+section.slider .bx-wrapper .bx-next,
+section.slider .bx-wrapper .bx-next:hover {
+	background-position: -43px -1px;
+	right: 30px;
+}
+
 h1 {
 	background-image: url( 'img/tituloBG.png' );
 	background-position: center center;
