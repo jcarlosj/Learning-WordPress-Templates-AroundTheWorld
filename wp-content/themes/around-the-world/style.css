@@ -507,7 +507,6 @@ article.testimonio p.city {
 	color: #DF7900;
 }
 
-
 /* Paginación */
 nav ul.pagination {
 	list-style: none;
@@ -528,6 +527,39 @@ nav ul.pagination li a {
 	color: white;
 }
 
+/* Formularios: Contact Form 7 Plugin */
+.wpcf7-form p {
+	color: black;
+}
+.wpcf7-form input,
+.wpcf7-form textarea {
+	-moz-box-shadow: inset 0 0 10px #E1E1E1;
+	-webkit-box-shadow: inset 0 0 10px #E1E1E1;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border: none;
+	box-shadow: inset 0 0 10px #E1E1E1;
+	height: 30px;
+	width: 100;
+}
+.wpcf7-form textarea {
+	height: 250px;
+}
+.wpcf7-form .wpcf7-submit {
+	background-color: #DF7900;
+	border: none;
+	box-shadow: none;
+	color: white;
+	font-weight: bold;
+	padding: 5px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
+}
+.contacto form.wpcf7-form {
+	width: 40%;
+	margin: 0 auto;
+}
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/
