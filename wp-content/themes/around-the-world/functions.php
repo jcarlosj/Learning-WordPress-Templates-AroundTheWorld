@@ -114,6 +114,9 @@ function html5blank_header_scripts()
 
       wp_register_script( 'lightbox2', get_template_directory_uri() . '/js/lightbox.min.js', array(), '2.10.0', true ); // Lightbox2
       wp_enqueue_script( 'lightbox2' ); // Enqueue it!
+
+      wp_register_script( 'bxslider', get_template_directory_uri() . '/js/jquery.bxslider.js', array(), '4.2.12', true ); // BxSlider
+      wp_enqueue_script( 'bxslider' ); // Enqueue it!
     }
 }
 
@@ -137,6 +140,9 @@ function html5blank_styles()
 
     wp_register_style( 'lightbox2', get_template_directory_uri() . '/css/lightbox.min.css', array(), '1.0', 'all');
     wp_enqueue_style( 'lightbox2' ); // Enqueue it!
+
+    wp_register_style( 'bxslider', get_template_directory_uri() . '/css/jquery.bxslider.css', array(), '1.0', 'all');
+    wp_enqueue_style( 'bxslider' ); // Enqueue it!
 }
 
 // Register HTML5 Blank Navigation
@@ -364,6 +370,7 @@ add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('init', 'testimonios_post_type');  # Add our HTML5 Blank Custom Post Type
+add_action('init', 'slider_post_type');       # Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -479,6 +486,44 @@ function testimonios_post_type() {
         'supports' => array(
             'title',
             'editor',
+            #'excerpt',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            #'post_tag',
+            #'category'
+        ) // Add Category and Post Tags support
+    ));
+}
+
+# Crea 'Custom Post Type' para Slider página principal
+function slider_post_type() {
+    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'html5-blank');
+    register_post_type('slider', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Sliders', 'html5blank'), // Rename these to suit
+            'singular_name' => __('Slider', 'html5blank'),
+            'add_new' => __('Agregar nuevo', 'html5blank'),
+            'add_new_item' => __('Agregar Nuevo Slider', 'html5blank'),
+            'edit' => __('Editar', 'html5blank'),
+            'edit_item' => __('Editar Slider', 'html5blank'),
+            'new_item' => __('Nuevo Slider', 'html5blank'),
+            'view' => __('Ver Sliders', 'html5blank'),
+            'view_item' => __('Ver Slider', 'html5blank'),
+            'search_items' => __('Buscar Sliders', 'html5blank'),
+            'not_found' => __('Sliders no encontrados', 'html5blank'),
+            'not_found_in_trash' => __('Sliders no encontrado en la papelera', 'html5blank')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => false,
+        'menu_position' => 6,
+        'supports' => array(
+            'title',
+            #'editor',
             #'excerpt',
             'thumbnail'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
