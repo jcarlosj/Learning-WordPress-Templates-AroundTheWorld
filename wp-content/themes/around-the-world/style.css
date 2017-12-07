@@ -251,6 +251,13 @@ footer .widget_sp_image img {
 \*------------------------------------*/
 
 /* Slider: front-page.php */
+section.slider {
+	position: relative;
+	left: 0;
+  top: -90px;
+	z-index: 0;  /* Sugerencia por IE9 */
+}
+
 section.slider ul.slider {
 	/* Solo cuando se aplica mode: 'fade', a BxSlider */
 	margin: 0;
