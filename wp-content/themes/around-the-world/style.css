@@ -251,43 +251,57 @@ footer .widget_sp_image img {
 \*------------------------------------*/
 
 /* Slider: front-page.php */
-section.slider {
+.home section.slider {
 	position: relative;
 	left: 0;
   top: -90px;
 	z-index: 0;  /* Sugerencia por IE9 */
 }
 
-section.slider ul.slider {
+.home section.slider ul.slider {
 	/* Solo cuando se aplica mode: 'fade', a BxSlider */
 	margin: 0;
 	padding: 0;
 }
-section.slider .bx-wrapper {
+
+.home section.slider .bx-wrapper {
 	border: none;
 	box-shadow: none;
 	left: 0;
 	margin-bottom: -93px;
 }
-section.slider .bx-wrapper .bx-viewport {
+
+.home section.slider .bx-wrapper .bx-viewport {
 	border: none;
 	box-shadow: none;
 	left: 0;
 }
-section.slider .bx-wrapper .bx-controls-direction a {
+
+.home section.slider .bx-wrapper .bx-controls-direction a {
 	height: 64px;
 	width: 44px;
 }
-section.slider .bx-wrapper .bx-prev,
-section.slider .bx-wrapper .bx-prev:hover {
+
+.home section.slider .bx-wrapper .bx-prev,
+.home section.slider .bx-wrapper .bx-prev:hover {
 	background-position: 0 -1px;
 	left: 30px;
 }
-section.slider .bx-wrapper .bx-next,
-section.slider .bx-wrapper .bx-next:hover {
+
+.home section.slider .bx-wrapper .bx-next,
+.home section.slider .bx-wrapper .bx-next:hover {
 	background-position: -43px -1px;
 	right: 30px;
 }
+.home article.type-tours {
+    margin: 0 0 45px 0;
+    padding: 0 24px 0 0px;
+}
+.home article.type-tours .outstanding_image .more-info {
+	right: -20px;
+}
+
+/**/
 
 h1 {
 	background-image: url( 'img/tituloBG.png' );
@@ -311,10 +325,12 @@ section.tours .title-date {
 section.tours .title-date a h2 {
 	color: white;
 	margin-top: 7px;
+	font-size: 22px;
 }
 section.tours .title-date p.date {
 	color: white;
 	margin-top: 0px;
+	font-size: 15px;
 }
 
 /* Efecto Polaroid */
@@ -350,7 +366,7 @@ section {
 
 article.type-tours {
 	margin: 0 0 45px 0;
-	padding: 0;
+	padding: 0 15px 0 0px;
 }
 
 article.type-tours h2 {
@@ -366,8 +382,8 @@ article.type-tours .outstanding_image {
 
 article.type-tours .outstanding_image .more-info {
 	position: absolute;
-	right: 7px;
-  top: 21px;
+	right: -8px;
+	top: 21px;
 }
 
 article.type-tours .date-price {
@@ -377,6 +393,7 @@ article.type-tours .date-price {
 	padding: 0;
 	width: 95%;
 }
+
 article.type-tours .date-price p.date {
 	float: left;
 	font-size: 16px;

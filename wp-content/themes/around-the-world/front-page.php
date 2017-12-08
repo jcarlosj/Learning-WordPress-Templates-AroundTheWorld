@@ -32,7 +32,8 @@
 	<div class="wrapper">
 
 		<section class="tours clear">
-			<h2><span>Próximos Tours</span></h2>
+
+			<h1><span>Próximos Tours</span></h1>
 
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -50,7 +51,7 @@
 						$tours -> the_post();
 				?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid_1-3' ); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid_1-3 tour-home' ); ?>>
 
 						<div class="outstanding_image">
 							<?php the_post_thumbnail( 'featured-tour-image' ); ?>
