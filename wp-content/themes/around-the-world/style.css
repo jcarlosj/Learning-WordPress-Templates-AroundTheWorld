@@ -300,6 +300,20 @@ h1 span {
 	padding:  0 25px;
 }
 
+/*  */
+section.tours .title-date {
+	background-color: #D4771E;
+	text-align: center;
+}
+section.tours .title-date a h2 {
+	color: white;
+	margin-top: 7px;
+}
+section.tours .title-date p.date {
+	color: white;
+	margin-top: 0px;
+}
+
 /* Efecto Polaroid */
 div.edge-photography {
 	background-color: white;
