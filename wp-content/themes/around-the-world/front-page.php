@@ -116,7 +116,7 @@
 						$entradas -> the_post();
 				?>
 
-					<div class="entry">
+					<div class="entry clear">
 						<div class="grid_1-3">
 							<?php the_post_thumbnail( 'entry-image' ); ?>
 						</div>

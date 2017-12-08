@@ -301,6 +301,26 @@ footer .widget_sp_image img {
 	right: -20px;
 }
 
+.home section.testimonials-tips h3 {
+	font-size: 18px;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.home section.testimonials-tips .entry p {
+	font-size: 14px;
+	margin: 0 0 15px 0;
+}
+.home section.testimonials-tips .view-article {
+	display: none;
+}
+.home section.testimonials-tips a.btn-continue {
+	background-color: #DF7900;
+	border-radius: 3px;
+	color: white;
+	padding: 7px;
+}
+
 /**/
 
 h1 {
