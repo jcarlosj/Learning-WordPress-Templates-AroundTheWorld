@@ -123,7 +123,7 @@
 						<div class="grid_2-3">
 							<h3><?php the_title(); ?></h3>
 							<?php html5wp_excerpt( 'html5wp_custom_post' ); ?>
-							<a href="<?php the_permalink(); ?>" class="btn-continue">Continuar leyendo</a>
+							<a href="<?php the_permalink(); ?>" class="btn-orange">Continuar leyendo</a>
 						</div>
 					</div>
 
@@ -131,7 +131,39 @@
 
 			</div>
 			<div class="grid_1-3">
-				<h2 class="title"><span>Testimonios</span></h2>
+
+				<section class="testimonies clear">
+
+					<h2 class="title"><span>Testimonios</span></h2>
+
+					<?php
+						$args = array(
+							'post_type'      => 'testimonios',		# Nombre del Post Type: testimonios (Creado en el functions.php o Slug sifue creado con 'CPT UI Plugin')
+							'posts_per_page' => 2,					      # Número de publicaciones por página (-1 = Todas)
+							'order'          => 'DESC',						# Ordenamiento descendente
+							'order_by'       => 'date'						# Ordenados por       : campo fecha
+						);
+
+						$testimonios = new WP_Query( $args );
+
+						while( $testimonios -> have_posts() ):
+							$testimonios -> the_post();
+					?>
+
+						<article class="testimonio">
+							<blockquote><p><?php html5wp_excerpt( 'html5wp_index' ); # Para que no agregue el tag <p> ?></p></blockquote>
+							<p class="name"><?php the_field( 'nombre' ) ?></p>
+							<p class="city"><?php the_field( 'ciudad' ) ?></p>
+						</article>
+						<!-- /article -->
+
+					<?php endwhile; wp_reset_postdata(); ?>
+
+					<a href="<?php echo get_permalink( 12 ); ?>" class="btn-orange btn-ver-todos">Ver todos</a>
+
+				</section>
+				<!-- .testimonies -->
+
 			</div>
 		</section>
 		<!-- section .testimonials-tips -->

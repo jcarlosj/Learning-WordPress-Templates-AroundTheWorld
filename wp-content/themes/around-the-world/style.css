@@ -301,6 +301,14 @@ footer .widget_sp_image img {
 	right: -20px;
 }
 
+.home section.testimonials-tips  section.testimonies {
+	margin-bottom: 20px;
+}
+.home section.testimonials-tips  section.testimonies blockquote p,
+.home section.testimonials-tips  section.testimonies p.city,
+.home section.testimonials-tips  section.testimonies p.name {
+	font-size: 14px;
+}
 .home section.testimonials-tips h3 {
 	font-size: 18px;
 	border: none;
@@ -314,11 +322,24 @@ footer .widget_sp_image img {
 .home section.testimonials-tips .view-article {
 	display: none;
 }
-.home section.testimonials-tips a.btn-continue {
+
+.home section.testimonials-tips a.btn-orange {
 	background-color: #DF7900;
 	border-radius: 3px;
 	color: white;
 	padding: 7px;
+	text-transform: uppercase;
+}
+.home section.testimonials-tips a.btn-ver-todos {
+	float: right;
+	font-weight: bold;
+	padding: 10px 15px;
+}
+
+.home section.testimonials-tips article.testimonio {
+	background-color: transparent: ;
+	border: none;
+	margin-bottom: 5px;
 }
 
 /**/
