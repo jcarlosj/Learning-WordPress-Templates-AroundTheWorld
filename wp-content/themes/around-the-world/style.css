@@ -265,6 +265,9 @@ section.slider ul.slider {
 }
 section.slider .bx-wrapper {
 	border: none;
+	box-shadow: none;
+	left: 0;
+	margin-bottom: -93px;
 }
 section.slider .bx-wrapper .bx-viewport {
 	border: none;
