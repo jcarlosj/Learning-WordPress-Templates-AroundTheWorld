@@ -38,6 +38,7 @@ if (function_exists('add_theme_support'))
     add_image_size( 'main-image-blog', 1100, 404, true ); # Personalización imagenes (Blog)
     add_image_size( 'thumbnail-footer-image', 98, 66, true ); # Personalización imagenes (Footer)
     add_image_size( 'slider-image', 2000, 600, true ); # Personalización imagenes (front-page.php)
+    add_image_size( 'entry-image', 250, 180, true );   # Personalización imagenes (front-page.php)
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     add_theme_support('custom-background', array(
