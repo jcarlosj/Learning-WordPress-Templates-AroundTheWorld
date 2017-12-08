@@ -33,7 +33,7 @@
 
 		<section class="tours clear">
 
-			<h1><span>Próximos Tours</span></h1>
+			<h2 class="title"><span>Próximos Tours</span></h2>
 
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -97,5 +97,15 @@
 
 		</section>
 		<!-- section .tours -->
+
+		<section class="testimonials-tips clear">
+			<div class="grid_2-3">
+				<h2 class="title"><span>Consejos para viajar</span></h2>
+			</div>
+			<div class="grid_1-3">
+				<h2 class="title"><span>Testimonios</span></h2>
+			</div>
+		</section>
+		<!-- section .testimonials-tips -->
 
 <?php get_footer(); ?>

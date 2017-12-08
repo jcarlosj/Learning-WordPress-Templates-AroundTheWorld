@@ -294,7 +294,7 @@ footer .widget_sp_image img {
 	right: 30px;
 }
 .home article.type-tours {
-    margin: 0 0 45px 0;
+    margin: 0;
     padding: 0 24px 0 0px;
 }
 .home article.type-tours .outstanding_image .more-info {
@@ -313,6 +313,20 @@ h1 {
 	text-align: center;
 }
 h1 span {
+	background-color: white;
+	padding:  0 25px;
+}
+
+h2.title {
+	background-image: url( 'img/tituloBG.png' );
+	background-position: center center;
+	background-repeat: repeat-x;
+	color: #D4771E;
+	font-size: 28px;
+	font-weight: normal;
+	text-align: center;
+}
+h2.title span {
 	background-color: white;
 	padding:  0 25px;
 }
@@ -360,7 +374,7 @@ div.edge-photography:nth-child( even ) {
 
 /* Tours */
 section {
-	margin: 0 0 30px 0;
+	margin: 0;
 	padding: 0;
 }
 
