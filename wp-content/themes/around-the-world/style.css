@@ -51,11 +51,11 @@ img {
 	vertical-align:bottom;
 }
 a {
-	color:#444;
+	color: #D47900;
 	text-decoration:none;
 }
 a:hover {
-	color:#444;
+	color: #D47900;
 }
 a:focus {
 	outline:0;
