@@ -144,6 +144,9 @@ function html5blank_styles()
 
     wp_register_style( 'bxslider', get_template_directory_uri() . '/css/jquery.bxslider.css', array(), '1.0', 'all');
     wp_enqueue_style( 'bxslider' ); // Enqueue it!
+
+    wp_register_style( 'oxygen', 'https://fonts.googleapis.com/css?family=Oxygen', array(), '1.1', 'all');
+    wp_enqueue_style( 'oxygen' ); // Enqueue it!
 }
 
 // Register HTML5 Blank Navigation
