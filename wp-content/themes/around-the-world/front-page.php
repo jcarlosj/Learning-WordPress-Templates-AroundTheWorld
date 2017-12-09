@@ -9,6 +9,8 @@
 
 	<div class="wrapper">
 
+		<?php get_template_part('searchform'); # Agrega buscador de WordPress ?>
+
 		<section class="tours clear">
 			<?php get_template_part( 'parts/index', 'tours' ); ?>
 		</section>
