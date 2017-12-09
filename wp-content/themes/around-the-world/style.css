@@ -202,6 +202,12 @@ button.search-submit {
 	padding: 0 15px;
 	height: 100%;
 	line-height: 73px;
+	-webkit-transition: all .9s ease;
+	-moz-transition: all .9s ease;
+	transition: all .9s ease;
+}
+.nav ul li:hover {
+	background-color: hsl(32.6, 100%, 53.7%);  /* #DF7900 claro */
 }
 .nav ul li.current_page_item {
 	background-color: #DF7900;
