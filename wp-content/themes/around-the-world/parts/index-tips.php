@@ -6,7 +6,7 @@
       'post_type'      => 'post',					  # Nombre del Post Type: testimonios (Creado en el functions.php o Slug sifue creado con 'CPT UI Plugin')
       'posts_per_page' => 2,					      # Número de publicaciones por página (-1 = Todas)
       'order'          => 'DESC',						# Ordenamiento descendente
-      'order_by'       => 'date'						# Ordenados por: campo fecha
+      'orderby'       => 'date'						# Ordenados por: campo fecha
     );
 
     $entradas = new WP_Query( $args );
