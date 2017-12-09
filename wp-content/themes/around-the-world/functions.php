@@ -519,7 +519,7 @@ function slider_post_type() {
             'not_found_in_trash' => __('Sliders no encontrado en la papelera', 'html5blank')
         ),
         'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'hierarchical' => false, // Sugerencia realizada para la configuración de 'Post Types Order Plugin' - Allows your posts to behave like Hierarchy Pages
         'has_archive' => false,
         'menu_position' => 6,
         'supports' => array(

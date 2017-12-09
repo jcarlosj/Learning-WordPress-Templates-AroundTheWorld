@@ -2,8 +2,9 @@
   $args = array(
     'post_type'      => 'slider',					# Nombre del Post Type: testimonios (Creado en el functions.php o Slug sifue creado con 'CPT UI Plugin')
     'posts_per_page' => -1,					      # Número de publicaciones por página (-1 = Todas)
-    'order'          => 'DESC',						# Ordenamiento descendente
-    'order_by'       => 'date'						# Ordenados por       : campo fecha
+    'order'          => 'ASC',						# Ordenamiento ascendente
+    'orderby'        => 'menu_order'			# Opción sugerida para el funcionamiento del reordenamiento con el
+                                          # 'Post Types Order Plugin'     : campo fecha
   );
 
   $slider = new WP_Query( $args );
