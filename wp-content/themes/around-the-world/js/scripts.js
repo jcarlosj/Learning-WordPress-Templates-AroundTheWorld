@@ -4,6 +4,9 @@
 
 		'use strict';
 
+		// Implementamos slicknav
+		jQuery( 'nav ul' ) .slicknav();
+
 		// Tours: Gallery (Plugin jQuery LightBox 2)
 		jQuery( '.gallery a' ) .each( function() {
 			jQuery( this ) .attr(
