@@ -90,6 +90,13 @@ h3 {
 	position: relative;
 }
 
+.entry .grid_2-3 {
+	width: 66.6%;
+}
+.entry .grid_1-3 {
+	width: 33.3%;
+}
+
 @media only screen and ( min-width: 768px ) {
 	.grid_2-4 {
 		width: 50%;
