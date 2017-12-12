@@ -461,6 +461,15 @@ footer .widget_sp_image img {
 	margin-bottom: 5px;
 }
 
+.form-testimonios {
+	float: none;
+}
+@media only screen and ( min-width: 768px ) {
+	.form-testimonios {
+		float: left;
+	}
+}
+
 /**/
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Oxygen', sans-serif !important;
@@ -792,7 +801,7 @@ nav ul.pagination li a {
 	border: none;
 	box-shadow: inset 0 0 10px #E1E1E1;
 	height: 30px;
-	width: 100;
+	width: 100%;
 }
 .wpcf7-form textarea {
 	height: 250px;
@@ -809,8 +818,13 @@ nav ul.pagination li a {
 	width: auto;
 }
 .contacto form.wpcf7-form {
-	width: 40%;
+	width: 90%;
 	margin: 0 auto;
+}
+@media only screen and ( min-width: 768px ) {
+	.contacto form.wpcf7-form {
+		width: 40%;
+	}
 }
 /*------------------------------------*\
     IMAGES
