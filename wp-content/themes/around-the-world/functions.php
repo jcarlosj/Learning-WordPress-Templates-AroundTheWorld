@@ -33,7 +33,7 @@ if (function_exists('add_theme_support'))
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     add_image_size( 'image-medium', 350, 250, true ); # Personalización imagenes (Página Nosotros)
-    add_image_size( 'featured-tour-image', 523, 294, true ); # Personalización imagenes (Página Tours)
+    add_image_size( 'featured-tour-image', 705, 391, true ); # Personalización imagenes (Página Tours)
     add_image_size( 'main-image-tours', 751, 422, true ); # Personalización imagenes (Página single-tours.php)
     add_image_size( 'main-image-blog', 1100, 404, true ); # Personalización imagenes (Blog)
     add_image_size( 'thumbnail-footer-image', 98, 66, true ); # Personalización imagenes (Footer)
