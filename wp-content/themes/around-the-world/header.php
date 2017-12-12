@@ -32,7 +32,7 @@
 		<!-- header -->
 		<header class="header clear" role="banner">
 
-			<div class="navigation">
+			<div class="navigation clear">
 
 				<!-- wrapper -->
 				<div class="wrapper">

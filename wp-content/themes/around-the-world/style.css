@@ -115,11 +115,17 @@ h3 {
 }
 .header .navigation {
 	background-color: rgba( 0, 0, 0, .7 );
-	height: 73px;
-	margin-top: 15px;
 	position: relative;
 	z-index: 3;
 }
+
+@media only screen and ( min-width: 992px ) {
+	.header .navigation {
+		height: 73px;
+		margin-top: 15px;
+	}
+}
+
 .header .alpha-background-image {
 	background-color: rgba( 255, 165, 0, 0.7 );
 	height: 300px;
@@ -179,9 +185,15 @@ button.search-submit {
 }
 
 /* logo */
-.logo {
-	float: left;
-	width: 235px;
+.logo img {
+	display: block;
+	margin: 0 auto;
+}
+@media only screen and ( min-width: 992px ) {
+	.logo {
+		float: left;
+		width: 235px;
+	}
 }
 .logo-img {
 
@@ -326,11 +338,13 @@ footer .widget_sp_image img {
 \*------------------------------------*/
 
 /* Slider: front-page.php */
-.home section.slider {
-	position: relative;
-	left: 0;
-  top: -90px;
-	z-index: 0;  /* Sugerencia por IE9 */
+@media only screen and ( min-width: 992px ) {
+	.home section.slider {
+		position: relative;
+		left: 0;
+	  top: -90px;
+		z-index: 0;  /* Sugerencia por IE9 */
+	}
 }
 
 .home section.slider ul.slider {
