@@ -1,4 +1,39 @@
 /* CSS File (Login) */
-body .login {
+body.login {
   background: transparent;
+  box-sizing: border-box;
+  padding-top: 100px
 }
+body.login div#login {
+  background-color: rgba( 0, 0, 0, .65 );
+  padding: 30px 40px;
+}
+
+@media screen and ( min-width: 768px ) {
+  body.login div#login {
+    bottom: 0;
+    height: 330px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 700px;
+  }
+}
+body.login div#login h1 {}
+body.login div#login h1 a {}
+body.login div#login form#loginform {}
+body.login div#login form#loginform p {}
+body.login div#login form#loginform p label {}
+body.login div#login form#loginform input {}
+body.login div#login form#loginform input#user_login {}
+body.login div#login form#loginform input#user_pass {}
+body.login div#login form#loginform p.forgetmenot {}
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+body.login div#login form#loginform p.submit {}
+body.login div#login form#loginform p.submit input#wp-submit {}
+body.login div#login p#nav {}
+body.login div#login p#nav a {}
+body.login div#login p#backtoblog {}
+body.login div#login p#backtoblog a {}
