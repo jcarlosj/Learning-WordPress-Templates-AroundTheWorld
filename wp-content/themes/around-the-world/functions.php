@@ -9,9 +9,11 @@
 	External Modules/Files
 \*------------------------------------*/
 function admin_styles() {
-  wp_enqueue_style( 'login-css', get_template_directory_uri(). '/login/css/login.css', false );                         # Agrega el PATH del fichero CSS para el Login
-  wp_enqueue_script( 'jquery' );                                                                                    # Implementa el uso de jQuery (Carga la librería de jQuery que trae WordPress)
-  wp_enqueue_script( 'login-js', get_template_directory_uri(). '/login/js/login.js', array( 'jquery' ), 1.0, true );   # Agrega el PATH del fichero JS para el Login
+  wp_enqueue_style( 'vegas-css', get_template_directory_uri(). '/login/css/vegas.min.css', false );                             # Implementa CSS para 'Vegas jQuery Plugin'
+  wp_enqueue_style( 'login-css', get_template_directory_uri(). '/login/css/login.css', false );                                 # Agrega el PATH del fichero CSS para el Login
+  wp_enqueue_script( 'jquery' );
+  wp_enqueue_script( 'vegas-js', get_template_directory_uri(). '/login/js/vegas.min.js', array( 'jquery' ), '2.4.0', true );    # Implementa JS para 'Vegas jQuery Plugin'                                                                                   # Implementa el uso de jQuery (Carga la librería de jQuery que trae WordPress)
+  wp_enqueue_script( 'login-js', get_template_directory_uri(). '/login/js/login.js', array( 'jquery' ), '1.0.0', true );        # Agrega el PATH del fichero JS para el Login
 }
 add_action(
   'login_enqueue_scripts',  # Script WP que se ejecuta en el Login (Backend)
