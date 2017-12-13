@@ -1,4 +1,7 @@
 jQuery( function( $ ) {
+  /* Agrupamos los tags <h1> (Logo) y <form> (Formulario de Login) en un tag <div> */
+  $( '#login h1, #login form' ) .wrapAll( '<div class="group-logo-formlogin"></div>' );
+
   /* Implementa 'Vegas jQuery Plugin' en el Login */
   $( 'body' ) .vegas({
     slides: [   /* Paths de las imagenes */
